@@ -3,7 +3,6 @@ from multiprocessing import Pool
 
 
 def private_worker(iterations):
-    # Private local accumulation: no shared counter and no lock.
     local_sum = 0
     for _ in range(iterations):
         local_sum += 1
@@ -20,10 +19,7 @@ def run_privatized(p, total_increments=20_000_000):
 
     total = sum(results)
     runtime = time.perf_counter() - start
-
-    assert total == total_increments, (
-        f"Total mismatch: {total} != {total_increments}"
-    )
+    assert total == total_increments, f"Total mismatch: {total} != {total_increments}"
     return runtime
 
 

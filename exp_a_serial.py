@@ -9,13 +9,9 @@ def heavy_math(n):
 
 def run_experiment(workers, total_chunks=16, chunk_size=2_000_000):
     start = time.perf_counter()
-
-    # Intentional sequential bottleneck from the handout
-    time.sleep(0.40)
-
+    time.sleep(0.40)  # Intentional sequential bottleneck
     with Pool(processes=workers) as pool:
         pool.map(heavy_math, [chunk_size] * total_chunks)
-
     return time.perf_counter() - start
 
 

@@ -9,15 +9,11 @@ def contended_worker(shared_counter, lock, iterations):
 
 
 def run_contended(p, total_increments=2_000_000):
-    # Dividing evenly ensures exactly total_increments for P in {1, 2, 4}.
     increments_per_worker = total_increments // p
     counter = Value("i", 0)
     lock = Lock()
     processes = [
-        Process(
-            target=contended_worker,
-            args=(counter, lock, increments_per_worker)
-        )
+        Process(target=contended_worker, args=(counter, lock, increments_per_worker))
         for _ in range(p)
     ]
 
