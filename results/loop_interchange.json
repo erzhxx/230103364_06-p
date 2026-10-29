@@ -1,0 +1,26 @@
+{
+  "student_id": "30103364",
+  "N": 1472,
+  "M": 736,
+  "seed": 46825,
+  "backend": "numba 0.68.1",
+  "runs": 3,
+  "times_ijk_s": [
+    0.8091682249999508,
+    0.8189664379999613,
+    0.7295027450000475
+  ],
+  "times_ikj_s": [
+    0.6604281520000086,
+    0.6527516900000023,
+    0.6294424570000388
+  ],
+  "median_ijk_s": 0.8091682249999508,
+  "median_ikj_s": 0.6527516900000023,
+  "speedup": 1.239626396064862,
+  "max_abs_diff": 0.0,
+  "epsilon": 1e-12,
+  "diff_within_epsilon": true,
+  "digest_sha256_round6": "c73b2f7ad9e5ef73ce85072b3f01ad980f03f7f1dc958104dd9ab9b5a82def8e",
+  "note": "C[i,j] kept in a register in i-j-k so the comparison isolates memory locality"
+}
