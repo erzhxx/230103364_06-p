@@ -1,0 +1,28 @@
+{
+  "kernel": "5-point Jacobi stencil, float64",
+  "flops_per_point": 4,
+  "dram_bytes_per_point_ideal": 16,
+  "dram_bytes_per_point_with_write_allocate": 24,
+  "arithmetic_intensity_flop_per_byte": 0.25,
+  "arithmetic_intensity_with_write_allocate": 0.16666666666666666,
+  "grid_N": 1472,
+  "working_set_bytes_two_grids": 34668544,
+  "cache_bytes": {
+    "L1d": 49152,
+    "L2": 1310720,
+    "L3": 18874368
+  },
+  "working_set_fits_in": "DRAM",
+  "P_max": 8,
+  "peak_gflops": 398.13107199999996,
+  "peak_gflops_assumption": "8 cores x 3.1103989999999997 GHz x 16 DP FLOP/cycle",
+  "peak_bandwidth_gbs": 40.248403002555804,
+  "peak_bandwidth_source": "measured STREAM-scale bandwidth (proxy for peak; DRAM spec not readable from OS)",
+  "measured_stream_bandwidth_gbs": 40.248403002555804,
+  "ridge_point_flop_per_byte": 9.89184768336568,
+  "attainable_gflops_roofline": 10.062100750638951,
+  "measured_gflops_at_Pmax": 2.8323532824959625,
+  "fraction_of_roofline": 0.28148727116612365,
+  "regime": "Memory-Bandwidth Bound",
+  "conclusion": "AI=0.250 FLOP/B is far below the ridge point 9.9 FLOP/B -> Memory-Bandwidth Bound. Working set (33.1 MiB) fits in DRAM; it therefore streams from DRAM every sweep."
+}
