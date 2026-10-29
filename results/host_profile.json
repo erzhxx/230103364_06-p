@@ -1,0 +1,44 @@
+{
+  "cpu": {
+    "model_name": "12th Gen Intel(R) Core(TM) i5-12500H",
+    "vendor": "GenuineIntel",
+    "microarchitecture": "Alder Lake",
+    "family": "6",
+    "model": "154",
+    "stepping": "3",
+    "base_freq_ghz": 3.1103989999999997,
+    "base_freq_source": "/proc/cpuinfo cpu MHz (current, approximate)",
+    "max_freq_ghz": null,
+    "physical_cores": 8,
+    "logical_threads": 16,
+    "smt_hyperthreading": true,
+    "usable_cpus_for_this_process": 16,
+    "simd_flags": [
+      "sse4_2",
+      "avx",
+      "avx2",
+      "fma"
+    ]
+  },
+  "cache": {
+    "l1d_bytes": 49152,
+    "l1i_bytes": 32768,
+    "l2_bytes": 1310720,
+    "l3_shared_bytes": 18874368,
+    "cache_line_bytes": 64
+  },
+  "memory_total_bytes": 8126103552,
+  "os": {
+    "system": "Linux",
+    "kernel_release": "6.18.33.2-microsoft-standard-WSL2",
+    "kernel_version": "#1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026",
+    "machine": "x86_64",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43"
+  },
+  "python": {
+    "implementation": "CPython",
+    "version": "3.14.4",
+    "compiler": "GCC 15.2.0",
+    "numpy": "2.5.4"
+  }
+}
