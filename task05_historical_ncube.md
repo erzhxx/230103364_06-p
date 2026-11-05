@@ -1,0 +1,9 @@
+# Task 05 — Historical nCUBE-10 case
+
+John Gustafson's 1988 argument was motivated by Sandia National Laboratories' experience with a 1,024-processor nCUBE/10 hypercube. The relevant scientific applications included beam/structural stress analysis using conjugate gradients, baffled surface-wave simulation using explicit finite differences, and unstable fluid-flow simulation using flux-corrected transport.
+
+Gustafson reported serial fractions around 0.4–0.8% and scaled speedups of approximately 1,016–1,021 on 1,024 processors in the three applications. These figures are consistent with the scaled-speedup equation. For example, with `alpha=0.004`, `S=1024-0.004*1023=1019.908`; with `alpha=0.008`, `S=1015.816`. This demonstrates why a 0.4% serial fraction does not imply an Amdahl ceiling of only about 250 when the workload itself is scaled.
+
+A related experimental paper by Gustafson, Montry, and Benner reported 1,009–1,020 speedup for fixed work per processor (scaled-size runs), while fixed-size runs achieved 502–637. This distinction matters: the dramatic near-linear results refer to scaled workloads, not the same fixed-size workload. The experiments did not disprove Amdahl's law; they showed that its fixed-size premise did not describe the scientific workloads being scaled.
+
+**Sources:** Gustafson, “Reevaluating Amdahl's Law,” *Communications of the ACM* 31(5), 1988, DOI: 10.1145/42411.42415; Gustafson, Montry & Benner, “Development of Parallel Methods for a 1024-Processor Hypercube,” *SIAM Journal on Scientific and Statistical Computing* 9(4), 1988. The original Gustafson paper is available at https://users.cs.utah.edu/~hari/teaching/paralg/Gustafson88.pdf; the experimental paper is indexed at https://www.researchgate.net/publication/245841513_Development_of_parallel_methods_for_a_1024_hypercubes.
